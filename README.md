@@ -1,4 +1,4 @@
-# phoniex-down
+# phoenix-down
 Beverage warmer hot plate that is controlled by a thermistor. The final system is 100% analog controlled.
 
 Rev 1 schematic
