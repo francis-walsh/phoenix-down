@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "Phoniex Down"
-Date "2021-05-07"
+Date "2021-05-17"
 Rev "1"
 Comp ""
 Comment1 ""
@@ -1319,7 +1319,7 @@ PWM_OUT
 Wire Wire Line
 	1100 4900 1300 4900
 $Comp
-L downFeather:LOGO #G1
+L beverageWarmer1-rescue:LOGO-downFeather #G1
 U 1 1 60A01B38
 P 6450 7500
 F 0 "#G1" H 6450 7204 60  0001 C CNN
