@@ -1,11 +1,74 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Generic_Conn_01x02
+# beverageWarmer1-rescue_+12V-power
 #
-DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+DEF beverageWarmer1-rescue_+12V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "beverageWarmer1-rescue_+12V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +12V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_+3.3VA-power
+#
+DEF beverageWarmer1-rescue_+3.3VA-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "beverageWarmer1-rescue_+3.3VA-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3.3VA 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_+3V3-power
+#
+DEF beverageWarmer1-rescue_+3V3-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "beverageWarmer1-rescue_+3V3-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_C_Small-Device
+#
+DEF beverageWarmer1-rescue_C_Small-Device C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "beverageWarmer1-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_Conn_01x02-Connector_Generic
+#
+DEF beverageWarmer1-rescue_Conn_01x02-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
+F1 "beverageWarmer1-rescue_Conn_01x02-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -20,11 +83,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_02x03_Odd_Even
+# beverageWarmer1-rescue_Conn_02x03_Odd_Even-Connector_Generic
 #
-DEF Connector_Generic_Conn_02x03_Odd_Even J 0 40 Y N 1 F N
+DEF beverageWarmer1-rescue_Conn_02x03_Odd_Even-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 50 200 50 H V C CNN
-F1 "Connector_Generic_Conn_02x03_Odd_Even" 50 -200 50 H V C CNN
+F1 "beverageWarmer1-rescue_Conn_02x03_Odd_Even-Connector_Generic" 50 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -47,46 +110,11 @@ X Pin_6 6 300 -100 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_TestPoint
+# beverageWarmer1-rescue_D_Small-Device
 #
-DEF Connector_TestPoint TP 0 30 N N 1 F N
-F0 "TP" 0 270 50 H V C CNN
-F1 "Connector_TestPoint" 0 200 50 H V C CNN
-F2 "" 200 0 50 H I C CNN
-F3 "" 200 0 50 H I C CNN
-$FPLIST
- Pin*
- Test*
-$ENDFPLIST
-DRAW
-C 0 130 30 0 1 0 N
-X 1 1 0 0 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_C_Small
-#
-DEF Device_C_Small C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "Device_C_Small" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 13 -60 -20 60 -20 N
-P 2 0 1 12 -60 20 60 20 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_D_Small
-#
-DEF Device_D_Small D 0 10 N N 1 F N
+DEF beverageWarmer1-rescue_D_Small-Device D 0 10 N N 1 F N
 F0 "D" -50 80 50 H V L CNN
-F1 "Device_D_Small" -150 -80 50 H V L CNN
+F1 "beverageWarmer1-rescue_D_Small-Device" -150 -80 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -104,11 +132,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D_Zener_Small
+# beverageWarmer1-rescue_D_Zener_Small-Device
 #
-DEF Device_D_Zener_Small D 0 10 N N 1 F N
+DEF beverageWarmer1-rescue_D_Zener_Small-Device D 0 10 N N 1 F N
 F0 "D" 0 90 50 H V C CNN
-F1 "Device_D_Zener_Small" 0 -90 50 H V C CNN
+F1 "beverageWarmer1-rescue_D_Zener_Small-Device" 0 -90 50 H V C CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -126,11 +154,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Ferrite_Bead_Small
+# beverageWarmer1-rescue_Ferrite_Bead_Small-Device
 #
-DEF Device_Ferrite_Bead_Small FB 0 0 N Y 1 F N
+DEF beverageWarmer1-rescue_Ferrite_Bead_Small-Device FB 0 0 N Y 1 F N
 F0 "FB" 75 50 50 H V L CNN
-F1 "Device_Ferrite_Bead_Small" 75 -50 50 H V L CNN
+F1 "beverageWarmer1-rescue_Ferrite_Bead_Small-Device" 75 -50 50 H V L CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -147,11 +175,11 @@ X ~ 2 0 -100 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Fuse_Small
+# beverageWarmer1-rescue_Fuse_Small-Device
 #
-DEF Device_Fuse_Small F 0 10 N N 1 F N
+DEF beverageWarmer1-rescue_Fuse_Small-Device F 0 10 N N 1 F N
 F0 "F" 0 -60 50 H V C CNN
-F1 "Device_Fuse_Small" 0 60 50 H V C CNN
+F1 "beverageWarmer1-rescue_Fuse_Small-Device" 0 60 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -165,11 +193,24 @@ X ~ 2 100 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_LED_Small
+# beverageWarmer1-rescue_GND-power
 #
-DEF Device_LED_Small D 0 10 N N 1 F N
+DEF beverageWarmer1-rescue_GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "beverageWarmer1-rescue_GND-power" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_LED_Small-Device
+#
+DEF beverageWarmer1-rescue_LED_Small-Device D 0 10 N N 1 F N
 F0 "D" -50 125 50 H V L CNN
-F1 "Device_LED_Small" -175 -100 50 H V L CNN
+F1 "beverageWarmer1-rescue_LED_Small-Device" -175 -100 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -188,11 +229,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_L_Small
+# beverageWarmer1-rescue_L_Small-Device
 #
-DEF Device_L_Small L 0 10 N N 1 F N
+DEF beverageWarmer1-rescue_L_Small-Device L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
-F1 "Device_L_Small" 30 -40 50 H V L CNN
+F1 "beverageWarmer1-rescue_L_Small-Device" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -211,11 +252,78 @@ X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Q_PMOS_DGS
+# beverageWarmer1-rescue_Logo_Open_Hardware_Small-Graphic
 #
-DEF Device_Q_PMOS_DGS Q 0 0 Y N 1 F N
+DEF beverageWarmer1-rescue_Logo_Open_Hardware_Small-Graphic #LOGO 0 40 Y Y 1 F N
+F0 "#LOGO" 0 275 50 H I C CNN
+F1 "beverageWarmer1-rescue_Logo_Open_Hardware_Small-Graphic" 0 -225 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 277 0 1 0 132 -171 130 -170 125 -167 118 -162 109 -156 100 -150 93 -146 88 -142 86 -141 85 -142 81 -144 75 -147 71 -149 66 -151 63 -151 63 -151 61 -147 58 -139 53 -130 49 -119 44 -107 38 -95 34 -83 29 -72 26 -64 24 -58 23 -55 23 -55 26 -52 31 -49 41 -40 51 -27 57 -13 60 3 58 18 52 32 42 45 30 54 16 60 0 62 -15 61 -29 55 -42 45 -48 39 -55 26 -60 12 -60 9 -59 -7 -55 -21 -47 -34 -36 -45 -34 -46 -29 -50 -25 -53 -23 -55 -42 -102 -45 -110 -51 -123 -55 -134 -59 -143 -62 -149 -63 -151 -63 -151 -65 -151 -68 -150 -75 -147 -79 -145 -84 -142 -87 -141 -89 -142 -93 -145 -100 -150 -109 -156 -117 -161 -124 -166 -130 -170 -132 -171 -133 -171 -135 -170 -139 -166 -146 -160 -155 -151 -156 -150 -164 -142 -170 -136 -174 -131 -175 -129 -175 -129 -174 -127 -170 -121 -166 -114 -160 -105 -144 -82 -153 -61 -155 -54 -159 -46 -161 -41 -162 -38 -165 -37 -170 -36 -179 -34 -189 -32 -199 -31 -207 -29 -214 -28 -217 -27 -217 -27 -218 -25 -218 -22 -218 -17 -219 -9 -219 3 -219 5 -218 16 -218 25 -218 30 -218 33 -218 33 -215 33 -209 35 -200 36 -190 38 -189 39 -179 41 -170 42 -164 44 -161 45 -161 45 -159 49 -156 56 -152 64 -149 72 -146 79 -144 85 -143 87 -143 87 -145 90 -148 95 -153 102 -160 111 -160 112 -166 121 -171 128 -174 133 -175 136 -175 136 -173 138 -169 143 -162 150 -155 158 -152 160 -144 169 -138 174 -134 177 -132 178 -132 178 -130 176 -124 172 -117 167 -108 161 -107 161 -98 155 -91 150 -86 146 -84 145 -83 145 -80 146 -73 148 -66 151 -58 155 -50 158 -45 160 -42 162 -42 162 -41 165 -40 171 -38 180 -36 191 -35 193 -33 203 -32 212 -31 218 -30 220 -28 221 -23 221 -16 221 -6 221 3 221 13 221 21 221 27 220 29 220 29 220 30 217 32 210 33 201 36 190 36 188 38 178 40 169 41 163 42 161 42 161 47 159 54 156 62 152 82 144 107 161 109 163 118 169 125 174 130 177 133 178 133 178 135 176 140 171 147 165 154 157 160 151 167 144 171 140 174 137 174 135 174 134 173 131 169 126 164 118 158 110 153 102 148 94 144 88 143 85 143 84 145 79 148 72 152 63 160 44 173 41 181 40 192 38 202 36 218 33 219 -26 216 -27 214 -27 208 -29 199 -30 189 -32 181 -34 172 -36 166 -37 163 -37 162 -38 160 -42 157 -49 154 -57 150 -65 147 -73 145 -79 144 -82 145 -84 149 -89 153 -97 159 -105 165 -114 170 -121 173 -126 175 -129 174 -131 171 -135 164 -141 155 -151 153 -152 145 -160 139 -166 134 -170 132 -171 F
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_MCP1402T-E
+#
+DEF beverageWarmer1-rescue_MCP1402T-E U 0 40 Y Y 1 F N
+F0 "U" 0 750 118 H V C CNN
+F1 "beverageWarmer1-rescue_MCP1402T-E" -50 550 118 H V C CNN
+F2 "" 200 -200 118 H I C CNN
+F3 "" 200 -200 118 H I C CNN
+DRAW
+S -250 50 200 -250 0 1 0 f
+X GND 1 300 -200 100 L 50 50 1 1 I
+X VDD 2 -350 0 100 R 50 50 1 1 I
+X IN 3 -350 -200 100 R 50 50 1 1 I
+X GND 4 300 -100 100 L 50 50 1 1 I
+X OUT 5 300 0 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_MIC5283-3.3ML-TR-chum-bucket
+#
+DEF beverageWarmer1-rescue_MIC5283-3.3ML-TR-chum-bucket U 0 40 Y Y 1 F N
+F0 "U" 0 450 39 H V C CNN
+F1 "beverageWarmer1-rescue_MIC5283-3.3ML-TR-chum-bucket" 100 350 39 H V C CNN
+F2 "" 0 0 39 H I C CNN
+F3 "" 0 0 39 H I C CNN
+DRAW
+S -350 300 250 -100 0 1 0 f
+X VIN 1 -450 250 100 R 50 50 1 1 I
+X N.C 2 0 200 100 L 50 50 1 1 N N
+X N.C 3 0 100 100 L 50 50 1 1 N N
+X CPSRR 4 -450 150 100 R 50 50 1 1 I
+X GND 5 -450 50 100 R 50 50 1 1 I
+X SNS 6 350 50 100 L 50 50 1 1 I
+X N.C 7 0 0 100 L 50 50 1 1 N N
+X VOUT 8 350 250 100 L 50 50 1 1 I
+X GND 9 -450 -50 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_Op07D-customSymbols
+#
+DEF beverageWarmer1-rescue_Op07D-customSymbols U 0 40 Y Y 1 F N
+F0 "U" 0 250 50 H V C CNN
+F1 "beverageWarmer1-rescue_Op07D-customSymbols" 0 -750 50 H V C CNN
+F2 "" 0 -650 50 H I C CNN
+F3 "" 0 -650 50 H I C CNN
+DRAW
+P 4 0 1 0 -300 100 -300 -500 350 -200 -300 100 f
+X -IN 2 -400 -100 100 R 50 50 0 0 I
+X +IN 3 -400 -300 100 R 50 50 0 0 I
+X V- 4 0 -450 100 U 50 50 0 0 w
+X OUT 6 450 -200 100 L 50 50 0 0 O
+X V+ 7 0 50 100 D 50 50 0 0 W
+ENDDRAW
+ENDDEF
+#
+# beverageWarmer1-rescue_Q_PMOS_DGS-Device
+#
+DEF beverageWarmer1-rescue_Q_PMOS_DGS-Device Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device_Q_PMOS_DGS" 200 -50 50 H V L CNN
+F1 "beverageWarmer1-rescue_Q_PMOS_DGS-Device" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -239,11 +347,11 @@ X S 3 100 -200 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R
+# beverageWarmer1-rescue_R-Device
 #
-DEF Device_R R 0 0 N Y 1 F N
+DEF beverageWarmer1-rescue_R-Device R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device_R" 0 0 50 V V C CNN
+F1 "beverageWarmer1-rescue_R-Device" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -256,11 +364,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R_Small
+# beverageWarmer1-rescue_R_Small-Device
 #
-DEF Device_R_Small R 0 10 N N 1 F N
+DEF beverageWarmer1-rescue_R_Small-Device R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "Device_R_Small" 30 -40 50 H V L CNN
+F1 "beverageWarmer1-rescue_R_Small-Device" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -273,23 +381,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Graphic_Logo_Open_Hardware_Small
+# beverageWarmer1-rescue_SN65HVD232-Interface_CAN_LIN
 #
-DEF Graphic_Logo_Open_Hardware_Small #LOGO 0 40 Y Y 1 F N
-F0 "#LOGO" 0 275 50 H I C CNN
-F1 "Graphic_Logo_Open_Hardware_Small" 0 -225 50 H I C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 277 0 1 0 132 -171 130 -170 125 -167 118 -162 109 -156 100 -150 93 -146 88 -142 86 -141 85 -142 81 -144 75 -147 71 -149 66 -151 63 -151 63 -151 61 -147 58 -139 53 -130 49 -119 44 -107 38 -95 34 -83 29 -72 26 -64 24 -58 23 -55 23 -55 26 -52 31 -49 41 -40 51 -27 57 -13 60 3 58 18 52 32 42 45 30 54 16 60 0 62 -15 61 -29 55 -42 45 -48 39 -55 26 -60 12 -60 9 -59 -7 -55 -21 -47 -34 -36 -45 -34 -46 -29 -50 -25 -53 -23 -55 -42 -102 -45 -110 -51 -123 -55 -134 -59 -143 -62 -149 -63 -151 -63 -151 -65 -151 -68 -150 -75 -147 -79 -145 -84 -142 -87 -141 -89 -142 -93 -145 -100 -150 -109 -156 -117 -161 -124 -166 -130 -170 -132 -171 -133 -171 -135 -170 -139 -166 -146 -160 -155 -151 -156 -150 -164 -142 -170 -136 -174 -131 -175 -129 -175 -129 -174 -127 -170 -121 -166 -114 -160 -105 -144 -82 -153 -61 -155 -54 -159 -46 -161 -41 -162 -38 -165 -37 -170 -36 -179 -34 -189 -32 -199 -31 -207 -29 -214 -28 -217 -27 -217 -27 -218 -25 -218 -22 -218 -17 -219 -9 -219 3 -219 5 -218 16 -218 25 -218 30 -218 33 -218 33 -215 33 -209 35 -200 36 -190 38 -189 39 -179 41 -170 42 -164 44 -161 45 -161 45 -159 49 -156 56 -152 64 -149 72 -146 79 -144 85 -143 87 -143 87 -145 90 -148 95 -153 102 -160 111 -160 112 -166 121 -171 128 -174 133 -175 136 -175 136 -173 138 -169 143 -162 150 -155 158 -152 160 -144 169 -138 174 -134 177 -132 178 -132 178 -130 176 -124 172 -117 167 -108 161 -107 161 -98 155 -91 150 -86 146 -84 145 -83 145 -80 146 -73 148 -66 151 -58 155 -50 158 -45 160 -42 162 -42 162 -41 165 -40 171 -38 180 -36 191 -35 193 -33 203 -32 212 -31 218 -30 220 -28 221 -23 221 -16 221 -6 221 3 221 13 221 21 221 27 220 29 220 29 220 30 217 32 210 33 201 36 190 36 188 38 178 40 169 41 163 42 161 42 161 47 159 54 156 62 152 82 144 107 161 109 163 118 169 125 174 130 177 133 178 133 178 135 176 140 171 147 165 154 157 160 151 167 144 171 140 174 137 174 135 174 134 173 131 169 126 164 118 158 110 153 102 148 94 144 88 143 85 143 84 145 79 148 72 152 63 160 44 173 41 181 40 192 38 202 36 218 33 219 -26 216 -27 214 -27 208 -29 199 -30 189 -32 181 -34 172 -36 166 -37 163 -37 162 -38 160 -42 157 -49 154 -57 150 -65 147 -73 145 -79 144 -82 145 -84 149 -89 153 -97 159 -105 165 -114 170 -121 173 -126 175 -129 174 -131 171 -135 164 -141 155 -151 153 -152 145 -160 139 -166 134 -170 132 -171 F
-ENDDRAW
-ENDDEF
-#
-# Interface_CAN_LIN_SN65HVD232
-#
-DEF Interface_CAN_LIN_SN65HVD232 U 0 40 Y Y 1 F N
+DEF beverageWarmer1-rescue_SN65HVD232-Interface_CAN_LIN U 0 40 Y Y 1 F N
 F0 "U" -100 400 50 H V R CNN
-F1 "Interface_CAN_LIN_SN65HVD232" -100 300 50 H V R CNN
+F1 "beverageWarmer1-rescue_SN65HVD232-Interface_CAN_LIN" -100 300 50 H V R CNN
 F2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" 0 -500 50 H I C CNN
 F3 "" -100 400 50 H I C CNN
 $FPLIST
@@ -308,14 +404,13 @@ X NC 8 -400 -200 100 R 50 50 1 1 N N
 ENDDRAW
 ENDDEF
 #
-# MCU_ST_STM32F1_STM32F103TBUx
+# beverageWarmer1-rescue_STM32F103TBUx-MCU_ST_STM32F1
 #
-DEF MCU_ST_STM32F1_STM32F103TBUx U 0 20 Y Y 1 F N
+DEF beverageWarmer1-rescue_STM32F103TBUx-MCU_ST_STM32F1 U 0 20 Y Y 1 F N
 F0 "U" -600 850 50 H V L CNN
-F1 "MCU_ST_STM32F1_STM32F103TBUx" 200 850 50 H V L CNN
+F1 "beverageWarmer1-rescue_STM32F103TBUx-MCU_ST_STM32F1" 200 850 50 H V L CNN
 F2 "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP4.1x4.1mm" -600 -900 50 H I R CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS STM32F103TBUx
 $FPLIST
  QFN*1EP*6x6mm*P0.5mm*
 $ENDFPLIST
@@ -361,11 +456,11 @@ X PA2 9 600 500 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# Switch_SW_SPST
+# beverageWarmer1-rescue_SW_SPST-Switch
 #
-DEF Switch_SW_SPST SW 0 0 Y N 1 F N
+DEF beverageWarmer1-rescue_SW_SPST-Switch SW 0 0 Y N 1 F N
 F0 "SW" 0 125 50 H V C CNN
-F1 "Switch_SW_SPST" 0 -100 50 H V C CNN
+F1 "beverageWarmer1-rescue_SW_SPST-Switch" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -374,40 +469,6 @@ C 80 0 20 0 0 0 N
 P 2 0 0 0 -60 10 60 70 N
 X A 1 -200 0 100 R 50 50 1 1 P
 X B 2 200 0 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# beverageWarmer1-rescue_MCP1402T-E
-#
-DEF beverageWarmer1-rescue_MCP1402T-E U 0 40 Y Y 1 F N
-F0 "U" 0 750 118 H V C CNN
-F1 "beverageWarmer1-rescue_MCP1402T-E" -50 550 118 H V C CNN
-F2 "" 200 -200 118 H I C CNN
-F3 "" 200 -200 118 H I C CNN
-DRAW
-S -250 50 200 -250 0 1 0 f
-X GND 1 300 -200 100 L 50 50 1 1 I
-X VDD 2 -350 0 100 R 50 50 1 1 I
-X IN 3 -350 -200 100 R 50 50 1 1 I
-X GND 4 300 -100 100 L 50 50 1 1 I
-X OUT 5 300 0 100 L 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# beverageWarmer1-rescue_Op07D-customSymbols
-#
-DEF beverageWarmer1-rescue_Op07D-customSymbols U 0 40 Y Y 1 F N
-F0 "U" 0 250 50 H V C CNN
-F1 "beverageWarmer1-rescue_Op07D-customSymbols" 0 -750 50 H V C CNN
-F2 "" 0 -650 50 H I C CNN
-F3 "" 0 -650 50 H I C CNN
-DRAW
-P 4 0 1 0 -300 100 -300 -500 350 -200 -300 100 f
-X -IN 2 -400 -100 100 R 50 50 0 0 I
-X +IN 3 -400 -300 100 R 50 50 0 0 I
-X V- 4 0 -450 100 U 50 50 0 0 w
-X OUT 6 450 -200 100 L 50 50 0 0 O
-X V+ 7 0 50 100 D 50 50 0 0 W
 ENDDRAW
 ENDDEF
 #
@@ -428,83 +489,20 @@ X VCC 5 -150 -50 100 D 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# chum-bucket_MIC5283-3.3ML-TR
+# beverageWarmer1-rescue_TestPoint-Connector
 #
-DEF chum-bucket_MIC5283-3.3ML-TR U 0 40 Y Y 1 F N
-F0 "U" 0 450 39 H V C CNN
-F1 "chum-bucket_MIC5283-3.3ML-TR" 100 350 39 H V C CNN
-F2 "" 0 0 39 H I C CNN
-F3 "" 0 0 39 H I C CNN
+DEF beverageWarmer1-rescue_TestPoint-Connector TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "beverageWarmer1-rescue_TestPoint-Connector" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
 DRAW
-S -350 300 250 -100 0 1 0 f
-X VIN 1 -450 250 100 R 50 50 1 1 I
-X N.C 2 0 200 100 L 50 50 1 1 N N
-X N.C 3 0 100 100 L 50 50 1 1 N N
-X CPSRR 4 -450 150 100 R 50 50 1 1 I
-X GND 5 -450 50 100 R 50 50 1 1 I
-X SNS 6 350 50 100 L 50 50 1 1 I
-X N.C 7 0 0 100 L 50 50 1 1 N N
-X VOUT 8 350 250 100 L 50 50 1 1 I
-X GND 9 -450 -50 100 R 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# power_+12V
-#
-DEF power_+12V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+12V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +12V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_+3.3VA
-#
-DEF power_+3.3VA #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3.3VA" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3.3VA 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_+3V3
-#
-DEF power_+3V3 #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3V3" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_GND
-#
-DEF power_GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

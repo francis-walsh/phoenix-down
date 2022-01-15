@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR056
+L beverageWarmer1-rescue:GND-power #PWR056
 U 1 1 61E6A96D
 P 10950 2200
 AR Path="/61E6A96D" Ref="#PWR056"  Part="1" 
@@ -27,7 +27,7 @@ F 3 "" H 10950 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R33
+L beverageWarmer1-rescue:R-Device R33
 U 1 1 61E6A974
 P 10700 2050
 AR Path="/61E6A974" Ref="R33"  Part="1" 
@@ -41,7 +41,7 @@ F 4 "A143800CT-ND" H 10700 2050 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R32
+L beverageWarmer1-rescue:R-Device R32
 U 1 1 61E6A97B
 P 10700 1750
 AR Path="/61E6A97B" Ref="R32"  Part="1" 
@@ -55,7 +55,7 @@ F 4 "A143800CT-ND" H 10700 1750 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R31
+L beverageWarmer1-rescue:R-Device R31
 U 1 1 61E6A982
 P 10450 2050
 AR Path="/61E6A982" Ref="R31"  Part="1" 
@@ -69,7 +69,7 @@ F 4 "A143800CT-ND" H 10450 2050 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R30
+L beverageWarmer1-rescue:R-Device R30
 U 1 1 61E6A989
 P 10450 1750
 AR Path="/61E6A989" Ref="R30"  Part="1" 
@@ -83,7 +83,7 @@ F 4 "A143800CT-ND" H 10450 1750 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R34
+L beverageWarmer1-rescue:R-Device R34
 U 1 1 61E6A990
 P 10950 1750
 AR Path="/61E6A990" Ref="R34"  Part="1" 
@@ -97,7 +97,7 @@ F 4 "A143800CT-ND" H 10950 1750 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R35
+L beverageWarmer1-rescue:R-Device R35
 U 1 1 61E6A998
 P 10950 2050
 AR Path="/61E6A998" Ref="R35"  Part="1" 
@@ -111,7 +111,7 @@ F 4 "A143800CT-ND" H 10950 2050 50  0001 C CNN "Digikey"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_ST_STM32F1:STM32F103TBUx U1
+L beverageWarmer1-rescue:STM32F103TBUx-MCU_ST_STM32F1 U1
 U 1 1 61E6B6EE
 P 1650 5900
 F 0 "U1" H 2150 6850 50  0000 C CNN
@@ -124,7 +124,7 @@ F 5 "Yes" H 1650 5900 50  0001 C CNN "Have"
 	1    0    0    -1  
 $EndComp
 $Comp
-L chum-bucket:MIC5283-3.3ML-TR U2
+L beverageWarmer1-rescue:MIC5283-3.3ML-TR-chum-bucket U2
 U 1 1 61E6BE0C
 P 1900 4050
 F 0 "U2" H 1850 4501 39  0000 C CNN
@@ -137,7 +137,7 @@ F 5 "Yes" H 1900 4050 50  0001 C CNN "Have"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_CAN_LIN:SN65HVD232 U5
+L beverageWarmer1-rescue:SN65HVD232-Interface_CAN_LIN U5
 U 1 1 61E6C83A
 P 3850 4350
 F 0 "U5" H 4200 4700 50  0000 C CNN
@@ -150,7 +150,7 @@ F 5 "Yes" H 3850 4350 50  0001 C CNN "Have"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR024
+L beverageWarmer1-rescue:+12V-power #PWR024
 U 1 1 61E80CB4
 P 4200 1150
 F 0 "#PWR024" H 4200 1000 50  0001 C CNN
@@ -161,7 +161,7 @@ F 3 "" H 4200 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J1
+L beverageWarmer1-rescue:Conn_01x02-Connector_Generic J1
 U 1 1 61E81B73
 P 750 1200
 F 0 "J1" H 750 1000 50  0000 C CNN
@@ -175,7 +175,7 @@ $EndComp
 Wire Wire Line
 	1000 1200 950  1200
 $Comp
-L power:GND #PWR05
+L beverageWarmer1-rescue:GND-power #PWR05
 U 1 1 61E83BC2
 P 1300 1500
 F 0 "#PWR05" H 1300 1250 50  0001 C CNN
@@ -188,7 +188,7 @@ $EndComp
 Wire Wire Line
 	2600 3800 2600 3700
 $Comp
-L power:+3V3 #PWR015
+L beverageWarmer1-rescue:+3V3-power #PWR015
 U 1 1 61E8C657
 P 2600 3700
 F 0 "#PWR015" H 2600 3550 50  0001 C CNN
@@ -199,7 +199,7 @@ F 3 "" H 2600 3700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
+L beverageWarmer1-rescue:GND-power #PWR02
 U 1 1 61E8D1FB
 P 800 4300
 F 0 "#PWR02" H 800 4050 50  0001 C CNN
@@ -210,7 +210,7 @@ F 3 "" H 800 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR010
+L beverageWarmer1-rescue:GND-power #PWR010
 U 1 1 61E8ED66
 P 1650 7050
 F 0 "#PWR010" H 1650 6800 50  0001 C CNN
@@ -244,7 +244,7 @@ Wire Wire Line
 Wire Wire Line
 	1650 6900 1650 7000
 $Comp
-L power:+3V3 #PWR09
+L beverageWarmer1-rescue:+3V3-power #PWR09
 U 1 1 61E92C53
 P 1550 4850
 F 0 "#PWR09" H 1550 4700 50  0001 C CNN
@@ -266,7 +266,7 @@ Connection ~ 1550 4950
 Wire Wire Line
 	1650 5000 1650 4950
 $Comp
-L power:GND #PWR041
+L beverageWarmer1-rescue:GND-power #PWR041
 U 1 1 61EAE62A
 P 7550 5350
 F 0 "#PWR041" H 7550 5100 50  0001 C CNN
@@ -279,7 +279,7 @@ $EndComp
 Wire Wire Line
 	7450 5050 7550 5050
 $Comp
-L Device:R_Small R26
+L beverageWarmer1-rescue:R_Small-Device R26
 U 1 1 61EB6E25
 P 9000 5700
 F 0 "R26" V 8950 5550 50  0000 C CNN
@@ -295,7 +295,7 @@ Wire Wire Line
 Wire Wire Line
 	9550 5700 9100 5700
 $Comp
-L Device:R_Small R24
+L beverageWarmer1-rescue:R_Small-Device R24
 U 1 1 61EBA71A
 P 8450 5900
 F 0 "R24" H 8391 5854 50  0000 R CNN
@@ -307,7 +307,7 @@ F 4 "2019-RK73Z1JTTDCT-ND" H 8450 5900 50  0001 C CNN "Digi"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR050
+L beverageWarmer1-rescue:GND-power #PWR050
 U 1 1 61EBD31E
 P 8950 5300
 F 0 "#PWR050" H 8950 5050 50  0001 C CNN
@@ -318,7 +318,7 @@ F 3 "" H 8950 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9550 5050 9550 5700
+	9550 5050 9550 5600
 Wire Wire Line
 	8450 5800 8450 5700
 Wire Wire Line
@@ -329,7 +329,7 @@ Wire Wire Line
 	8450 5150 8550 5150
 Connection ~ 8450 5700
 $Comp
-L power:GND #PWR047
+L beverageWarmer1-rescue:GND-power #PWR047
 U 1 1 61EC10F9
 P 8450 6050
 F 0 "#PWR047" H 8450 5800 50  0001 C CNN
@@ -342,7 +342,7 @@ $EndComp
 Wire Wire Line
 	8450 6050 8450 6000
 $Comp
-L power:+12V #PWR01
+L beverageWarmer1-rescue:+12V-power #PWR01
 U 1 1 61EDE667
 P 800 3750
 F 0 "#PWR01" H 800 3600 50  0001 C CNN
@@ -353,7 +353,7 @@ F 3 "" H 800 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C5
+L beverageWarmer1-rescue:C_Small-Device C5
 U 1 1 61EE3DBB
 P 5350 5750
 F 0 "C5" H 5442 5841 50  0000 L CNN
@@ -365,7 +365,7 @@ F 4 "6.3V" H 5442 5659 50  0000 L CNN "Voltage"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C6
+L beverageWarmer1-rescue:C_Small-Device C6
 U 1 1 61EEA5E6
 P 5650 5750
 F 0 "C6" H 5742 5841 50  0000 L CNN
@@ -377,7 +377,7 @@ F 4 "6.3V" H 5742 5659 50  0000 L CNN "Voltage"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C7
+L beverageWarmer1-rescue:C_Small-Device C7
 U 1 1 61EEAA49
 P 5950 5750
 F 0 "C7" H 6042 5841 50  0000 L CNN
@@ -389,7 +389,7 @@ F 4 "6.3V" H 6042 5659 50  0000 L CNN "Voltage"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C9
+L beverageWarmer1-rescue:C_Small-Device C9
 U 1 1 61EEAD1E
 P 6300 5750
 F 0 "C9" H 6392 5841 50  0000 L CNN
@@ -403,7 +403,7 @@ $EndComp
 Wire Wire Line
 	1550 4950 1650 4950
 $Comp
-L power:+3.3VA #PWR012
+L beverageWarmer1-rescue:+3.3VA-power #PWR012
 U 1 1 61EEF9B0
 P 1750 4950
 F 0 "#PWR012" H 1750 4800 50  0001 C CNN
@@ -416,7 +416,7 @@ $EndComp
 Wire Wire Line
 	1750 5000 1750 4950
 $Comp
-L power:+3.3VA #PWR026
+L beverageWarmer1-rescue:+3.3VA-power #PWR026
 U 1 1 61EF1628
 P 6300 5500
 F 0 "#PWR026" H 6300 5350 50  0001 C CNN
@@ -427,7 +427,7 @@ F 3 "" H 6300 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Ferrite_Bead_Small FB1
+L beverageWarmer1-rescue:Ferrite_Bead_Small-Device FB1
 U 1 1 61EF1CE5
 P 6100 5550
 F 0 "FB1" V 6050 5450 50  0000 C CNN
@@ -439,7 +439,7 @@ F 4 "490-1015-1-ND" V 6100 5550 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR019
+L beverageWarmer1-rescue:GND-power #PWR019
 U 1 1 61EF9385
 P 5350 5850
 F 0 "#PWR019" H 5350 5600 50  0001 C CNN
@@ -450,7 +450,7 @@ F 3 "" H 5350 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR021
+L beverageWarmer1-rescue:GND-power #PWR021
 U 1 1 61EF984A
 P 5650 5850
 F 0 "#PWR021" H 5650 5600 50  0001 C CNN
@@ -461,7 +461,7 @@ F 3 "" H 5650 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
+L beverageWarmer1-rescue:GND-power #PWR023
 U 1 1 61EF9C09
 P 5950 5850
 F 0 "#PWR023" H 5950 5600 50  0001 C CNN
@@ -472,7 +472,7 @@ F 3 "" H 5950 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR027
+L beverageWarmer1-rescue:GND-power #PWR027
 U 1 1 61EFA114
 P 6300 5850
 F 0 "#PWR027" H 6300 5600 50  0001 C CNN
@@ -496,7 +496,7 @@ Connection ~ 6300 5550
 Wire Wire Line
 	6300 5550 6300 5650
 $Comp
-L power:+3V3 #PWR018
+L beverageWarmer1-rescue:+3V3-power #PWR018
 U 1 1 61F06093
 P 5350 5500
 F 0 "#PWR018" H 5350 5350 50  0001 C CNN
@@ -511,7 +511,7 @@ Wire Wire Line
 Text Notes 5250 6250 0    39   Italic 0
 Layout note: place decoupling capacitors as \nclose to mcu 3v3 and gndpins as possible. 
 $Comp
-L power:GND #PWR04
+L beverageWarmer1-rescue:GND-power #PWR04
 U 1 1 61F370B6
 P 1150 4300
 F 0 "#PWR04" H 1150 4050 50  0001 C CNN
@@ -522,7 +522,7 @@ F 3 "" H 1150 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L beverageWarmer1-rescue:GND-power #PWR06
 U 1 1 61F39522
 P 1300 4300
 F 0 "#PWR06" H 1300 4050 50  0001 C CNN
@@ -533,7 +533,7 @@ F 3 "" H 1300 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR07
+L beverageWarmer1-rescue:GND-power #PWR07
 U 1 1 61F3975E
 P 1450 4300
 F 0 "#PWR07" H 1450 4050 50  0001 C CNN
@@ -554,7 +554,7 @@ Wire Wire Line
 Wire Wire Line
 	800  4300 800  4200
 $Comp
-L Device:C_Small C4
+L beverageWarmer1-rescue:C_Small-Device C4
 U 1 1 61F61510
 P 2600 4000
 F 0 "C4" H 2508 3909 50  0000 R CNN
@@ -567,7 +567,7 @@ F 5 "1276-6641-1-ND" H 2600 4000 50  0001 C CNN "Digi"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR016
+L beverageWarmer1-rescue:GND-power #PWR016
 U 1 1 61F61E11
 P 2600 4300
 F 0 "#PWR016" H 2600 4050 50  0001 C CNN
@@ -583,7 +583,7 @@ Wire Wire Line
 	2600 3900 2600 3800
 Connection ~ 2600 3800
 $Comp
-L Device:R_Small R8
+L beverageWarmer1-rescue:R_Small-Device R8
 U 1 1 61F8F3F1
 P 3150 6900
 F 0 "R8" H 3209 6946 50  0000 L CNN
@@ -596,7 +596,7 @@ F 5 "A130470CT-ND" H 3150 6900 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R9
+L beverageWarmer1-rescue:R_Small-Device R9
 U 1 1 61F903E6
 P 3400 6900
 F 0 "R9" H 3459 6946 50  0000 L CNN
@@ -609,7 +609,7 @@ F 5 "1/4W" H 3500 6750 50  0000 C CNN "Power"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:LED_Small D3
+L beverageWarmer1-rescue:LED_Small-Device D3
 U 1 1 61F90B25
 P 3150 7200
 F 0 "D3" V 3200 6950 50  0000 L CNN
@@ -621,7 +621,7 @@ F 4 "754-1123-1-ND" V 3150 7200 50  0001 C CNN "Digi"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:LED_Small D4
+L beverageWarmer1-rescue:LED_Small-Device D4
 U 1 1 61F9A1F5
 P 3400 7200
 F 0 "D4" V 3450 7000 50  0000 L CNN
@@ -633,7 +633,7 @@ F 4 "754-1357-1-ND" V 3400 7200 50  0001 C CNN "Digi"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR020
+L beverageWarmer1-rescue:GND-power #PWR020
 U 1 1 61F9C3CC
 P 3150 7300
 F 0 "#PWR020" H 3150 7050 50  0001 C CNN
@@ -644,7 +644,7 @@ F 3 "" H 3150 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR022
+L beverageWarmer1-rescue:GND-power #PWR022
 U 1 1 61F9DD42
 P 3400 7300
 F 0 "#PWR022" H 3400 7050 50  0001 C CNN
@@ -661,7 +661,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 6750 3400 6750
 $Comp
-L power:GND #PWR03
+L beverageWarmer1-rescue:GND-power #PWR03
 U 1 1 61FD2462
 P 650 5600
 F 0 "#PWR03" H 650 5350 50  0001 C CNN
@@ -699,7 +699,7 @@ Wire Wire Line
 	10700 2250 10700 2200
 NoConn ~ 8450 5900
 $Comp
-L Device:R_Small R21
+L beverageWarmer1-rescue:R_Small-Device R21
 U 1 1 620B0488
 P 7800 5150
 F 0 "R21" H 7741 5104 50  0000 R CNN
@@ -719,7 +719,7 @@ Connection ~ 7800 4950
 Wire Wire Line
 	7800 4950 7800 4850
 $Comp
-L power:GND #PWR044
+L beverageWarmer1-rescue:GND-power #PWR044
 U 1 1 620B9004
 P 7800 5350
 F 0 "#PWR044" H 7800 5100 50  0001 C CNN
@@ -732,7 +732,7 @@ $EndComp
 Wire Wire Line
 	7800 5350 7800 5250
 $Comp
-L power:+3V3 #PWR043
+L beverageWarmer1-rescue:+3V3-power #PWR043
 U 1 1 620BE251
 P 7800 4650
 F 0 "#PWR043" H 7800 4500 50  0001 C CNN
@@ -750,9 +750,9 @@ Connection ~ 9550 5050
 Wire Wire Line
 	9900 5050 10150 5050
 Wire Wire Line
-	10150 5050 10150 5150
+	10150 5050 10150 5100
 $Comp
-L power:GND #PWR055
+L beverageWarmer1-rescue:GND-power #PWR055
 U 1 1 620F5911
 P 10150 5450
 F 0 "#PWR055" H 10150 5200 50  0001 C CNN
@@ -763,7 +763,7 @@ F 3 "" H 10150 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10150 5450 10150 5350
+	10150 5450 10150 5400
 Wire Wire Line
 	10150 5050 10850 5050
 Connection ~ 10150 5050
@@ -781,7 +781,7 @@ LED_1
 Text Label 3700 6650 2    39   ~ 0
 LED_2
 $Comp
-L Device:C_Small C16
+L beverageWarmer1-rescue:C_Small-Device C16
 U 1 1 6219683D
 P 9300 1650
 F 0 "C16" H 9208 1559 50  0000 R CNN
@@ -794,7 +794,7 @@ F 5 "445-6931-1-ND" H 9300 1650 50  0001 C CNN "Digi"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR051
+L beverageWarmer1-rescue:GND-power #PWR051
 U 1 1 62197CE6
 P 9300 1850
 AR Path="/62197CE6" Ref="#PWR051"  Part="1" 
@@ -816,7 +816,7 @@ Wire Wire Line
 	10450 1500 10450 1600
 Connection ~ 9300 1500
 $Comp
-L power:+12V #PWR040
+L beverageWarmer1-rescue:+12V-power #PWR040
 U 1 1 621AA61D
 P 7850 1350
 F 0 "#PWR040" H 7850 1200 50  0001 C CNN
@@ -827,7 +827,7 @@ F 3 "" H 7850 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_PMOS_DGS Q4
+L beverageWarmer1-rescue:Q_PMOS_DGS-Device Q4
 U 1 1 6225CF49
 P 8500 1600
 F 0 "Q4" V 8842 1600 50  0000 C CNN
@@ -839,7 +839,7 @@ F 4 "SISS05DN-T1-GE3CT-ND" V 8500 1600 50  0001 C CNN "Digi"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Device:R_Small R13
+L beverageWarmer1-rescue:R_Small-Device R13
 U 1 1 623DD036
 P 4450 4400
 F 0 "R13" H 4391 4354 50  0000 R CNN
@@ -871,7 +871,7 @@ Wire Wire Line
 Wire Wire Line
 	4700 4200 4700 4350
 $Comp
-L power:+3V3 #PWR030
+L beverageWarmer1-rescue:+3V3-power #PWR030
 U 1 1 6240B25E
 P 3850 3600
 F 0 "#PWR030" H 3850 3450 50  0001 C CNN
@@ -884,7 +884,7 @@ $EndComp
 Wire Wire Line
 	3850 4050 3850 3650
 $Comp
-L Device:C_Small C8
+L beverageWarmer1-rescue:C_Small-Device C8
 U 1 1 62416BEE
 P 3650 3800
 F 0 "C8" H 3558 3709 50  0000 R CNN
@@ -896,7 +896,7 @@ F 4 "6.3V" H 3558 3891 50  0000 R CNN "Voltage"
 	1    0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR025
+L beverageWarmer1-rescue:GND-power #PWR025
 U 1 1 62417593
 P 3650 3900
 F 0 "#PWR025" H 3650 3650 50  0001 C CNN
@@ -911,7 +911,7 @@ Wire Wire Line
 Wire Wire Line
 	3650 3650 3850 3650
 $Comp
-L power:GND #PWR031
+L beverageWarmer1-rescue:GND-power #PWR031
 U 1 1 62430377
 P 3850 4750
 F 0 "#PWR031" H 3850 4500 50  0001 C CNN
@@ -922,7 +922,7 @@ F 3 "" H 3850 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J3
+L beverageWarmer1-rescue:Conn_02x03_Odd_Even-Connector_Generic J3
 U 1 1 62466EE8
 P 5900 6950
 F 0 "J3" H 5950 6625 50  0000 C CNN
@@ -943,7 +943,7 @@ Wire Wire Line
 Wire Wire Line
 	5550 7050 5550 7150
 $Comp
-L power:GND #PWR037
+L beverageWarmer1-rescue:GND-power #PWR037
 U 1 1 6248A488
 P 5550 7150
 F 0 "#PWR037" H 5550 6900 50  0001 C CNN
@@ -958,7 +958,7 @@ Wire Wire Line
 Wire Wire Line
 	6450 6850 6450 6650
 $Comp
-L power:+3V3 #PWR038
+L beverageWarmer1-rescue:+3V3-power #PWR038
 U 1 1 624A85CF
 P 6450 6650
 F 0 "#PWR038" H 6450 6500 50  0001 C CNN
@@ -985,7 +985,7 @@ CAN_UART_P
 Text Label 3050 4350 0    39   ~ 0
 CAN_UART_N
 $Comp
-L Switch:SW_SPST SW1
+L beverageWarmer1-rescue:SW_SPST-Switch SW1
 U 1 1 625E020E
 P 4800 6800
 F 0 "SW1" H 4600 6850 50  0000 C CNN
@@ -997,7 +997,7 @@ F 4 "SW1020CT-ND" H 4800 6800 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR034
+L beverageWarmer1-rescue:GND-power #PWR034
 U 1 1 625F706F
 P 5150 7100
 F 0 "#PWR034" H 5150 6850 50  0001 C CNN
@@ -1012,7 +1012,7 @@ Wire Wire Line
 Wire Wire Line
 	5150 6800 5150 7000
 $Comp
-L power:GND #PWR029
+L beverageWarmer1-rescue:GND-power #PWR029
 U 1 1 62607806
 P 4250 7300
 F 0 "#PWR029" H 4250 7050 50  0001 C CNN
@@ -1023,7 +1023,7 @@ F 3 "" H 4250 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR028
+L beverageWarmer1-rescue:+3V3-power #PWR028
 U 1 1 626111CD
 P 4250 6450
 F 0 "#PWR028" H 4250 6300 50  0001 C CNN
@@ -1042,7 +1042,7 @@ Wire Wire Line
 Text Notes 9750 5850 0    39   Italic 0
 1591 Hz corner frequency. This is ok. 
 $Comp
-L Device:Fuse_Small F1
+L beverageWarmer1-rescue:Fuse_Small-Device F1
 U 1 1 61E43A89
 P 1100 1200
 F 0 "F1" H 1100 1385 50  0000 C CNN
@@ -1078,7 +1078,7 @@ F 4 "296-TL391BIDBVRCT-ND" H 2900 1650 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C3
+L beverageWarmer1-rescue:C_Small-Device C3
 U 1 1 62252211
 P 2600 1400
 F 0 "C3" H 2508 1309 50  0000 R CNN
@@ -1101,7 +1101,7 @@ Connection ~ 2750 1250
 Wire Wire Line
 	2750 1250 2750 1200
 $Comp
-L power:GND #PWR017
+L beverageWarmer1-rescue:GND-power #PWR017
 U 1 1 622624D6
 P 2750 2350
 F 0 "#PWR017" H 2750 2100 50  0001 C CNN
@@ -1112,7 +1112,7 @@ F 3 "" H 2750 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR014
+L beverageWarmer1-rescue:GND-power #PWR014
 U 1 1 62262960
 P 2600 1500
 F 0 "#PWR014" H 2600 1250 50  0001 C CNN
@@ -1136,7 +1136,7 @@ Wire Wire Line
 Wire Wire Line
 	3700 2000 3700 1500
 $Comp
-L Device:R_Small R10
+L beverageWarmer1-rescue:R_Small-Device R10
 U 1 1 622955E0
 P 3500 2000
 F 0 "R10" V 3450 1850 50  0000 C CNN
@@ -1153,7 +1153,7 @@ Wire Wire Line
 	3400 2000 3250 2000
 Connection ~ 3250 2000
 $Comp
-L Device:D_Zener_Small D2
+L beverageWarmer1-rescue:D_Zener_Small-Device D2
 U 1 1 622D0945
 P 1850 2200
 F 0 "D2" V 1800 2400 50  0000 R CNN
@@ -1174,7 +1174,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 1550 1850 1200
 $Comp
-L power:GND #PWR011
+L beverageWarmer1-rescue:GND-power #PWR011
 U 1 1 622F85A2
 P 1850 2350
 F 0 "#PWR011" H 1850 2100 50  0001 C CNN
@@ -1205,7 +1205,7 @@ Connection ~ 2100 1200
 Wire Wire Line
 	2100 1200 2750 1200
 $Comp
-L power:GND #PWR013
+L beverageWarmer1-rescue:GND-power #PWR013
 U 1 1 623552D3
 P 2100 2350
 F 0 "#PWR013" H 2100 2100 50  0001 C CNN
@@ -1220,7 +1220,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 2350 2750 2300
 $Comp
-L Device:D_Small D6
+L beverageWarmer1-rescue:D_Small-Device D6
 U 1 1 623E1C74
 P 8800 1700
 F 0 "D6" V 8754 1770 50  0000 L CNN
@@ -1232,7 +1232,7 @@ F 4 "V3FL45HM3/HGICT-ND" V 8800 1700 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:L_Small L1
+L beverageWarmer1-rescue:L_Small-Device L1
 U 1 1 6241F2C1
 P 9050 1500
 F 0 "L1" V 9235 1500 50  0000 C CNN
@@ -1248,7 +1248,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 1500 8950 1500
 $Comp
-L power:GND #PWR048
+L beverageWarmer1-rescue:GND-power #PWR048
 U 1 1 62485F16
 P 8800 1900
 AR Path="/62485F16" Ref="#PWR048"  Part="1" 
@@ -1295,7 +1295,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 1900 8000 1800
 $Comp
-L power:GND #PWR046
+L beverageWarmer1-rescue:GND-power #PWR046
 U 1 1 6219F950
 P 8000 1900
 AR Path="/6219F950" Ref="#PWR046"  Part="1" 
@@ -1308,7 +1308,7 @@ F 3 "" H 8000 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C15
+L beverageWarmer1-rescue:C_Small-Device C15
 U 1 1 62193AC6
 P 8000 1700
 F 0 "C15" H 8092 1791 50  0000 L CNN
@@ -1920,7 +1920,7 @@ D2 98 19 00 00 00 00 49 45 4E 44 AE 42 60 82
 EndData
 $EndBitmap
 $Comp
-L Device:Q_PMOS_DGS Q1
+L beverageWarmer1-rescue:Q_PMOS_DGS-Device Q1
 U 1 1 62D833AB
 P 3700 1300
 F 0 "Q1" V 4042 1300 50  0000 C CNN
@@ -1932,7 +1932,7 @@ F 4 "SISS05DN-T1-GE3CT-ND" V 3700 1300 50  0001 C CNN "Digi"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Switch:SW_SPST SW2
+L beverageWarmer1-rescue:SW_SPST-Switch SW2
 U 1 1 62E36192
 P 4800 7000
 F 0 "SW2" H 4600 7050 50  0000 C CNN
@@ -1946,7 +1946,7 @@ $EndComp
 Wire Wire Line
 	4450 7100 4450 7000
 $Comp
-L power:GND #PWR033
+L beverageWarmer1-rescue:GND-power #PWR033
 U 1 1 62E361B1
 P 4450 7300
 F 0 "#PWR033" H 4450 7050 50  0001 C CNN
@@ -1957,7 +1957,7 @@ F 3 "" H 4450 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR032
+L beverageWarmer1-rescue:+3V3-power #PWR032
 U 1 1 62E361B7
 P 4450 6450
 F 0 "#PWR032" H 4450 6300 50  0001 C CNN
@@ -1989,7 +1989,7 @@ Connection ~ 4450 7000
 Wire Wire Line
 	4450 7000 4600 7000
 $Comp
-L Device:D_Small D5
+L beverageWarmer1-rescue:D_Small-Device D5
 U 1 1 63016275
 P 6200 6850
 F 0 "D5" H 6200 7057 50  0000 C CNN
@@ -2001,7 +2001,7 @@ F 4 "V3FL45HM3/HGICT-ND" V 6200 6850 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J2
+L beverageWarmer1-rescue:Conn_01x02-Connector_Generic J2
 U 1 1 63044222
 P 4950 4350
 F 0 "J2" H 4950 4100 50  0000 C CNN
@@ -2013,7 +2013,7 @@ F 4 "WM1860-ND" H 4950 4350 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J4
+L beverageWarmer1-rescue:Conn_01x02-Connector_Generic J4
 U 1 1 630625B4
 P 7250 4950
 F 0 "J4" H 7250 4700 50  0000 C CNN
@@ -2025,7 +2025,7 @@ F 4 "WM1860-ND" H 7250 4950 50  0001 C CNN "Digi"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR042
+L beverageWarmer1-rescue:GND-power #PWR042
 U 1 1 630AA0ED
 P 7550 3050
 AR Path="/630AA0ED" Ref="#PWR042"  Part="1" 
@@ -2051,7 +2051,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 5650 5100 5650
 $Comp
-L power:GND #PWR035
+L beverageWarmer1-rescue:GND-power #PWR035
 U 1 1 632B9016
 P 3900 5950
 F 0 "#PWR035" H 3900 5700 50  0001 C CNN
@@ -2075,7 +2075,7 @@ Wire Notes Line width 39
 	6700 3750 11150 3750
 Connection ~ 1850 1200
 $Comp
-L Device:R_Small R3
+L beverageWarmer1-rescue:R_Small-Device R3
 U 1 1 634560A1
 P 1600 2250
 F 0 "R3" H 1659 2296 50  0000 L CNN
@@ -2088,7 +2088,7 @@ F 5 "1%" H 1700 2100 50  0000 C CNN "Tolerance"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R2
+L beverageWarmer1-rescue:R_Small-Device R2
 U 1 1 6345645B
 P 1600 1850
 F 0 "R2" H 1659 1896 50  0000 L CNN
@@ -2101,7 +2101,7 @@ F 5 "1%" H 1700 1700 50  0000 C CNN "Tolerance"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR08
+L beverageWarmer1-rescue:GND-power #PWR08
 U 1 1 6347984C
 P 1600 2350
 F 0 "#PWR08" H 1600 2100 50  0001 C CNN
@@ -2132,7 +2132,7 @@ Wire Wire Line
 Wire Wire Line
 	10150 2000 10150 1900
 $Comp
-L power:GND #PWR054
+L beverageWarmer1-rescue:GND-power #PWR054
 U 1 1 63569BBA
 P 10150 2200
 AR Path="/63569BBA" Ref="#PWR054"  Part="1" 
@@ -2231,7 +2231,7 @@ PWM_SPARE_1
 Text Label 5300 4700 0    39   ~ 0
 PWM_SPARE_2
 $Comp
-L Device:D_Small D1
+L beverageWarmer1-rescue:D_Small-Device D1
 U 1 1 63C622B3
 P 1300 1300
 F 0 "D1" V 1300 1400 50  0000 C CNN
@@ -2263,7 +2263,7 @@ $EndComp
 Wire Wire Line
 	8300 2500 8500 2500
 $Comp
-L power:GND #PWR0101
+L beverageWarmer1-rescue:GND-power #PWR0101
 U 1 1 61E91E55
 P 8400 2800
 AR Path="/61E91E55" Ref="#PWR0101"  Part="1" 
@@ -2287,7 +2287,7 @@ Wire Wire Line
 Wire Wire Line
 	7250 2700 7250 2600
 $Comp
-L power:+3V3 #PWR0102
+L beverageWarmer1-rescue:+3V3-power #PWR0102
 U 1 1 61EDF483
 P 7250 2400
 F 0 "#PWR0102" H 7250 2250 50  0001 C CNN
@@ -2307,7 +2307,7 @@ Wire Wire Line
 Wire Wire Line
 	7550 2500 7550 2850
 $Comp
-L power:+12V #PWR0103
+L beverageWarmer1-rescue:+12V-power #PWR0103
 U 1 1 61F15FB5
 P 7550 2400
 F 0 "#PWR0103" H 7550 2250 50  0001 C CNN
@@ -2362,7 +2362,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 5550 5950 5550
 $Comp
-L power:GND #PWR0104
+L beverageWarmer1-rescue:GND-power #PWR0104
 U 1 1 62217104
 P 3550 5950
 F 0 "#PWR0104" H 3550 5700 50  0001 C CNN
@@ -2373,7 +2373,7 @@ F 3 "" H 3550 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR036
+L beverageWarmer1-rescue:GND-power #PWR036
 U 1 1 632B9D94
 P 4250 5950
 F 0 "#PWR036" H 4250 5700 50  0001 C CNN
@@ -2384,7 +2384,7 @@ F 3 "" H 4250 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0105
+L beverageWarmer1-rescue:GND-power #PWR0105
 U 1 1 622170FE
 P 3200 5950
 F 0 "#PWR0105" H 3200 5700 50  0001 C CNN
@@ -2429,7 +2429,7 @@ Connection ~ 3200 5650
 Wire Wire Line
 	3200 5650 4300 5650
 $Comp
-L Connector:TestPoint TP1
+L beverageWarmer1-rescue:TestPoint-Connector TP1
 U 1 1 623DE6EB
 P 5850 4400
 F 0 "TP1" V 5800 4600 50  0000 L CNN
@@ -2440,7 +2440,7 @@ F 3 "~" H 6050 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP2
+L beverageWarmer1-rescue:TestPoint-Connector TP2
 U 1 1 624031C2
 P 6050 4400
 F 0 "TP2" V 6000 4600 50  0000 L CNN
@@ -2451,7 +2451,7 @@ F 3 "~" H 6250 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP3
+L beverageWarmer1-rescue:TestPoint-Connector TP3
 U 1 1 62403762
 P 6250 4400
 F 0 "TP3" V 6200 4600 50  0000 L CNN
@@ -2462,7 +2462,7 @@ F 3 "~" H 6450 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP4
+L beverageWarmer1-rescue:TestPoint-Connector TP4
 U 1 1 62403C4F
 P 6450 4400
 F 0 "TP4" V 6400 4600 50  0000 L CNN
@@ -2487,7 +2487,7 @@ Wire Wire Line
 Text Notes 9250 3450 0    39   Italic 0
 TO DO: \n- Add digi P/N for connector pre-crimped leads\n- Add digi P/N for thermistor \n- Add digi P/N for passives \n- Add digi P/N for Thermal interface material\n- Add digi P/N for CAN to UART adapter? 
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO1
+L beverageWarmer1-rescue:Logo_Open_Hardware_Small-Graphic #LOGO1
 U 1 1 62677530
 P 12450 1850
 F 0 "#LOGO1" H 12450 2125 50  0001 C CNN
@@ -2499,7 +2499,7 @@ F 4 "490-7167-ND" H 12450 2145 50  0000 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO2
+L beverageWarmer1-rescue:Logo_Open_Hardware_Small-Graphic #LOGO2
 U 1 1 6267F1C7
 P 12450 2500
 F 0 "#LOGO2" H 12450 2775 50  0001 C CNN
@@ -2511,7 +2511,7 @@ F 4 "0430300001-12-B0-ND" H 12450 2795 50  0000 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO3
+L beverageWarmer1-rescue:Logo_Open_Hardware_Small-Graphic #LOGO3
 U 1 1 626A34C4
 P 12450 3150
 F 0 "#LOGO3" H 12450 3425 50  0001 C CNN
@@ -2523,7 +2523,7 @@ F 4 "0430300001-12-R0-ND" H 12450 3445 50  0000 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO4
+L beverageWarmer1-rescue:Logo_Open_Hardware_Small-Graphic #LOGO4
 U 1 1 626A3E4B
 P 12450 3800
 F 0 "#LOGO4" H 12450 4075 50  0001 C CNN
@@ -2535,7 +2535,7 @@ F 4 "WM1845-ND" H 12450 4095 50  0000 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO5
+L beverageWarmer1-rescue:Logo_Open_Hardware_Small-Graphic #LOGO5
 U 1 1 626A78E2
 P 12450 4400
 F 0 "#LOGO5" H 12450 4675 50  0001 C CNN
@@ -2559,7 +2559,7 @@ Wire Wire Line
 Text Notes 2900 7600 0    39   Italic 0
 Brightness set for 50mcd\n
 $Comp
-L Device:R_Small R4
+L beverageWarmer1-rescue:R_Small-Device R4
 U 1 1 627E0460
 P 1850 1650
 F 0 "R4" H 1909 1696 50  0000 L CNN
@@ -2571,7 +2571,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 1850 1650 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R6
+L beverageWarmer1-rescue:R_Small-Device R6
 U 1 1 627E0927
 P 2100 1850
 F 0 "R6" H 2159 1896 50  0000 L CNN
@@ -2583,7 +2583,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 2100 1850 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R5
+L beverageWarmer1-rescue:R_Small-Device R5
 U 1 1 627E0D86
 P 2100 1550
 F 0 "R5" H 2159 1596 50  0000 L CNN
@@ -2595,7 +2595,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 2100 1550 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R7
+L beverageWarmer1-rescue:R_Small-Device R7
 U 1 1 627E1C2D
 P 3250 1750
 F 0 "R7" H 3309 1796 50  0000 L CNN
@@ -2607,7 +2607,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 3250 1750 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R18
+L beverageWarmer1-rescue:R_Small-Device R18
 U 1 1 627F3169
 P 7250 2500
 F 0 "R18" H 7309 2546 50  0000 L CNN
@@ -2619,7 +2619,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 7250 2500 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R20
+L beverageWarmer1-rescue:R_Small-Device R20
 U 1 1 62808B1B
 P 8250 1800
 F 0 "R20" H 8309 1846 50  0000 L CNN
@@ -2631,7 +2631,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 8250 1800 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R29
+L beverageWarmer1-rescue:R_Small-Device R29
 U 1 1 6281BD69
 P 10150 2100
 F 0 "R29" H 10209 2146 50  0000 L CNN
@@ -2644,7 +2644,7 @@ F 5 "1%" H 10250 1950 50  0000 C CNN "Tolerance"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R1
+L beverageWarmer1-rescue:R_Small-Device R1
 U 1 1 6282DEAD
 P 650 5500
 F 0 "R1" H 709 5546 50  0000 L CNN
@@ -2656,7 +2656,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 650 5500 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R11
+L beverageWarmer1-rescue:R_Small-Device R11
 U 1 1 628ABD97
 P 4250 6550
 F 0 "R11" H 4309 6596 50  0000 L CNN
@@ -2668,7 +2668,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 4250 6550 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R17
+L beverageWarmer1-rescue:R_Small-Device R17
 U 1 1 628C0901
 P 4450 6550
 F 0 "R17" H 4509 6596 50  0000 L CNN
@@ -2680,7 +2680,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 4450 6550 50  0001 C CNN "Digi"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R12
+L beverageWarmer1-rescue:R_Small-Device R12
 U 1 1 628C11CA
 P 4400 5350
 F 0 "R12" V 4350 5100 50  0000 L CNN
@@ -2692,7 +2692,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 4400 5350 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R14
+L beverageWarmer1-rescue:R_Small-Device R14
 U 1 1 628CAF40
 P 4400 5450
 F 0 "R14" V 4350 5200 50  0000 L CNN
@@ -2704,7 +2704,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 4400 5450 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R15
+L beverageWarmer1-rescue:R_Small-Device R15
 U 1 1 628CB719
 P 4400 5550
 F 0 "R15" V 4350 5300 50  0000 L CNN
@@ -2716,7 +2716,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 4400 5550 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R16
+L beverageWarmer1-rescue:R_Small-Device R16
 U 1 1 628CBB98
 P 4400 5650
 F 0 "R16" V 4350 5400 50  0000 L CNN
@@ -2728,7 +2728,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 4400 5650 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R27
+L beverageWarmer1-rescue:R_Small-Device R27
 U 1 1 628CE7B1
 P 9800 5050
 F 0 "R27" V 9750 4800 50  0000 L CNN
@@ -2740,7 +2740,7 @@ F 4 "RMCF0603JJ1K00CT-ND" H 9800 5050 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R25
+L beverageWarmer1-rescue:R_Small-Device R25
 U 1 1 628E8C69
 P 8500 2000
 F 0 "R25" H 8400 1900 50  0000 C CNN
@@ -2752,7 +2752,7 @@ F 4 "A130079CT-ND" V 8500 2000 50  0001 C CNN "Digi"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R28
+L beverageWarmer1-rescue:R_Small-Device R28
 U 1 1 6296A7EA
 P 10150 1750
 F 0 "R28" H 10209 1796 50  0000 L CNN
@@ -2765,7 +2765,7 @@ F 5 "1%" H 10250 1600 50  0000 C CNN "Tolerance"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R19
+L beverageWarmer1-rescue:R_Small-Device R19
 U 1 1 62983B3D
 P 7800 4750
 F 0 "R19" H 7859 4796 50  0000 L CNN
@@ -2778,7 +2778,7 @@ F 5 "1%" H 7900 4600 50  0000 C CNN "Tolerance"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR053
+L beverageWarmer1-rescue:GND-power #PWR053
 U 1 1 621305A3
 P 9700 4650
 F 0 "#PWR053" H 9700 4400 50  0001 C CNN
@@ -2802,7 +2802,7 @@ F 5 "Yes" H 8950 5250 50  0001 C CNN "Have"
 	1    0    0    1   
 $EndComp
 $Comp
-L power:+3V3 #PWR052
+L beverageWarmer1-rescue:+3V3-power #PWR052
 U 1 1 62132701
 P 9700 4450
 F 0 "#PWR052" H 9700 4300 50  0001 C CNN
@@ -2820,9 +2820,9 @@ Wire Wire Line
 Text Label 9300 4500 2    39   ~ 0
 THERM_OUTPUT_UNFILT_AI
 Wire Wire Line
-	8400 4500 9300 4500
+	8400 4500 8850 4500
 $Comp
-L power:+3V3 #PWR049
+L beverageWarmer1-rescue:+3V3-power #PWR049
 U 1 1 62119254
 P 8950 4800
 F 0 "#PWR049" H 8950 4650 50  0001 C CNN
@@ -2833,7 +2833,7 @@ F 3 "" H 8950 4800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R23
+L beverageWarmer1-rescue:R_Small-Device R23
 U 1 1 62A8D173
 P 8300 4950
 F 0 "R23" V 8250 4800 50  0000 C CNN
@@ -2845,7 +2845,7 @@ F 4 "2019-RK73Z1JTTDCT-ND" V 8300 4950 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small R22
+L beverageWarmer1-rescue:R_Small-Device R22
 U 1 1 62AA6F4B
 P 8300 4500
 F 0 "R22" V 8250 4350 50  0000 C CNN
@@ -2857,7 +2857,7 @@ F 4 "2019-RK73Z1JTTDCT-ND" V 8300 4500 50  0001 C CNN "Digi"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C18
+L beverageWarmer1-rescue:C_Small-Device C18
 U 1 1 62B039DF
 P 7550 2950
 F 0 "C18" H 7458 2859 50  0000 R CNN
@@ -2870,7 +2870,7 @@ F 5 "1276-1019-1-ND" H 7550 2950 50  0001 C CNN "Digi"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C20
+L beverageWarmer1-rescue:C_Small-Device C20
 U 1 1 62B1E72F
 P 10150 5250
 F 0 "C20" H 10058 5159 50  0000 R CNN
@@ -2883,7 +2883,7 @@ F 5 "1276-1019-1-ND" H 10150 5250 50  0001 C CNN "Digi"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C2
+L beverageWarmer1-rescue:C_Small-Device C2
 U 1 1 62B3B9D3
 P 1150 4100
 F 0 "C2" H 1058 4009 50  0000 R CNN
@@ -2896,7 +2896,7 @@ F 5 "1276-1019-1-ND" H 1150 4100 50  0001 C CNN "Digi"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C13
+L beverageWarmer1-rescue:C_Small-Device C13
 U 1 1 62B5F453
 P 4250 5850
 F 0 "C13" H 4158 5759 50  0000 R CNN
@@ -2909,7 +2909,7 @@ F 5 "1276-1019-1-ND" H 4250 5850 50  0001 C CNN "Digi"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C12
+L beverageWarmer1-rescue:C_Small-Device C12
 U 1 1 62B7A08A
 P 3900 5850
 F 0 "C12" H 3808 5759 50  0000 R CNN
@@ -2922,7 +2922,7 @@ F 5 "1276-1019-1-ND" H 3900 5850 50  0001 C CNN "Digi"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C11
+L beverageWarmer1-rescue:C_Small-Device C11
 U 1 1 62B7AF7E
 P 3550 5850
 F 0 "C11" H 3458 5759 50  0000 R CNN
@@ -2935,7 +2935,7 @@ F 5 "1276-1019-1-ND" H 3550 5850 50  0001 C CNN "Digi"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C10
+L beverageWarmer1-rescue:C_Small-Device C10
 U 1 1 62B7BDEB
 P 3200 5850
 F 0 "C10" H 3108 5759 50  0000 R CNN
@@ -2950,7 +2950,7 @@ $EndComp
 Wire Wire Line
 	4250 7100 4250 6800
 $Comp
-L Device:C_Small C14
+L beverageWarmer1-rescue:C_Small-Device C14
 U 1 1 62B81597
 P 4250 7200
 F 0 "C14" H 4158 7109 50  0000 R CNN
@@ -2963,7 +2963,7 @@ F 5 "1276-1019-1-ND" H 4250 7200 50  0001 C CNN "Digi"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C17
+L beverageWarmer1-rescue:C_Small-Device C17
 U 1 1 62BAD9E0
 P 4450 7200
 F 0 "C17" H 4358 7109 50  0000 R CNN
@@ -2976,7 +2976,7 @@ F 5 "1276-1019-1-ND" H 4450 7200 50  0001 C CNN "Digi"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C_Small C19
+L beverageWarmer1-rescue:C_Small-Device C19
 U 1 1 62BF03E9
 P 9700 4550
 F 0 "C19" H 9792 4641 50  0000 L CNN
@@ -2989,7 +2989,7 @@ F 5 "445-6931-1-ND" H 9700 4550 50  0001 C CNN "Digi"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C1
+L beverageWarmer1-rescue:C_Small-Device C1
 U 1 1 62C09767
 P 800 4100
 F 0 "C1" H 892 4191 50  0000 L CNN
@@ -3013,7 +3013,7 @@ NoConn ~ 950  6500
 NoConn ~ 950  6600
 NoConn ~ 950  6700
 $Comp
-L Graphic:Logo_Open_Hardware_Small #LOGO6
+L beverageWarmer1-rescue:Logo_Open_Hardware_Small-Graphic #LOGO6
 U 1 1 62D74A70
 P 12450 5000
 F 0 "#LOGO6" H 12450 5275 50  0001 C CNN
@@ -3024,4 +3024,16 @@ F 4 "1568-1217-ND" H 12450 5295 50  0000 C CNN "Digi"
 	1    12450 5000
 	1    0    0    -1  
 $EndComp
+Connection ~ 10150 5100
+Wire Wire Line
+	10150 5100 10150 5150
+Connection ~ 10150 5400
+Wire Wire Line
+	10150 5400 10150 5350
+Connection ~ 8850 4500
+Wire Wire Line
+	8850 4500 9300 4500
+Connection ~ 9550 5600
+Wire Wire Line
+	9550 5600 9550 5700
 $EndSCHEMATC
