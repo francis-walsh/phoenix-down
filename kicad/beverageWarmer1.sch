@@ -2779,17 +2779,6 @@ Wire Wire Line
 Text Label 9300 4500 2    39   ~ 0
 THERM_OUTPUT_UNFILT_AI
 $Comp
-L beverageWarmer1-rescue:+3V3-power #PWR049
-U 1 1 62119254
-P 8950 4800
-F 0 "#PWR049" H 8950 4650 50  0001 C CNN
-F 1 "+3V3" H 8965 4973 50  0000 C CNN
-F 2 "" H 8950 4800 50  0001 C CNN
-F 3 "" H 8950 4800 50  0001 C CNN
-	1    8950 4800
-	1    0    0    -1  
-$EndComp
-$Comp
 L beverageWarmer1-rescue:R_Small-Device R23
 U 1 1 62A8D173
 P 8300 4950
@@ -3127,4 +3116,15 @@ Text Label 2950 5700 2    39   ~ 0
 THERM_OUTPUT_UNFILT_AI
 Wire Wire Line
 	2250 5700 2950 5700
+$Comp
+L beverageWarmer1-rescue:+3V3-power #PWR049
+U 1 1 62119254
+P 8950 4800
+F 0 "#PWR049" H 8950 4650 50  0001 C CNN
+F 1 "+3V3" H 8965 4973 50  0000 C CNN
+F 2 "" H 8950 4800 50  0001 C CNN
+F 3 "" H 8950 4800 50  0001 C CNN
+	1    8950 4800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

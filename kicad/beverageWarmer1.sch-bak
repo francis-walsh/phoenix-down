@@ -2990,10 +2990,10 @@ Wire Wire Line
 Wire Wire Line
 	8400 4500 9300 4500
 $Comp
-L beverageWarmer1-rescue:C_Small-Device C?
+L beverageWarmer1-rescue:C_Small-Device C22
 U 1 1 61E74AE7
 P 9150 1500
-F 0 "C?" H 9058 1409 50  0000 R CNN
+F 0 "C22" H 9058 1409 50  0000 R CNN
 F 1 "1u" H 9058 1500 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9150 1500 50  0001 C CNN
 F 3 "~" H 9150 1500 50  0001 C CNN
@@ -3003,12 +3003,12 @@ F 5 "445-6931-1-ND" H 9150 1500 50  0001 C CNN "Digi"
 	-1   0    0    1   
 $EndComp
 $Comp
-L beverageWarmer1-rescue:GND-power #PWR?
+L beverageWarmer1-rescue:GND-power #PWR045
 U 1 1 61E74AED
 P 9150 1700
-AR Path="/61E74AED" Ref="#PWR?"  Part="1" 
+AR Path="/61E74AED" Ref="#PWR045"  Part="1" 
 AR Path="/60A3EDE3/61E74AED" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 9150 1450 50  0001 C CNN
+F 0 "#PWR045" H 9150 1450 50  0001 C CNN
 F 1 "GND" H 9155 1527 50  0000 C CNN
 F 2 "" H 9150 1700 50  0001 C CNN
 F 3 "" H 9150 1700 50  0001 C CNN
@@ -3020,10 +3020,10 @@ Wire Wire Line
 Wire Wire Line
 	9150 1350 9150 1400
 $Comp
-L beverageWarmer1-rescue:C_Small-Device C?
+L beverageWarmer1-rescue:C_Small-Device C23
 U 1 1 61F0B6D6
 P 9450 1500
-F 0 "C?" H 9358 1409 50  0000 R CNN
+F 0 "C23" H 9358 1409 50  0000 R CNN
 F 1 "1u" H 9358 1500 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 9450 1500 50  0001 C CNN
 F 3 "~" H 9450 1500 50  0001 C CNN
@@ -3033,12 +3033,12 @@ F 5 "445-6931-1-ND" H 9450 1500 50  0001 C CNN "Digi"
 	-1   0    0    1   
 $EndComp
 $Comp
-L beverageWarmer1-rescue:GND-power #PWR?
+L beverageWarmer1-rescue:GND-power #PWR057
 U 1 1 61F0B6DC
 P 9450 1700
-AR Path="/61F0B6DC" Ref="#PWR?"  Part="1" 
+AR Path="/61F0B6DC" Ref="#PWR057"  Part="1" 
 AR Path="/60A3EDE3/61F0B6DC" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 9450 1450 50  0001 C CNN
+F 0 "#PWR057" H 9450 1450 50  0001 C CNN
 F 1 "GND" H 9455 1527 50  0000 C CNN
 F 2 "" H 9450 1700 50  0001 C CNN
 F 3 "" H 9450 1700 50  0001 C CNN
@@ -3070,12 +3070,12 @@ Wire Wire Line
 Wire Wire Line
 	7450 1750 7450 1650
 $Comp
-L beverageWarmer1-rescue:GND-power #PWR?
+L beverageWarmer1-rescue:GND-power #PWR039
 U 1 1 61FCB536
 P 7450 1750
-AR Path="/61FCB536" Ref="#PWR?"  Part="1" 
+AR Path="/61FCB536" Ref="#PWR039"  Part="1" 
 AR Path="/60A3EDE3/61FCB536" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 7450 1500 50  0001 C CNN
+F 0 "#PWR039" H 7450 1500 50  0001 C CNN
 F 1 "GND" H 7455 1577 50  0000 C CNN
 F 2 "" H 7450 1750 50  0001 C CNN
 F 3 "" H 7450 1750 50  0001 C CNN
@@ -3083,10 +3083,10 @@ F 3 "" H 7450 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L beverageWarmer1-rescue:C_Small-Device C?
+L beverageWarmer1-rescue:C_Small-Device C21
 U 1 1 61FCB53E
 P 7450 1550
-F 0 "C?" H 7542 1641 50  0000 L CNN
+F 0 "C21" H 7542 1641 50  0000 L CNN
 F 1 "1u" H 7542 1550 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7450 1550 50  0001 C CNN
 F 3 "~" H 7450 1550 50  0001 C CNN
