@@ -1028,8 +1028,6 @@ F 3 "" H 4250 6450 50  0001 C CNN
 $EndComp
 Text Label 3850 6800 0    39   ~ 0
 ~SW_RESET
-Text Notes 8650 3400 0    39   Italic 0
-TO DO: SIM THIS\n
 Wire Wire Line
 	8150 1650 8150 1750
 Text Notes 9750 5850 0    39   Italic 0
@@ -2443,8 +2441,6 @@ Wire Wire Line
 	6450 4700 6450 4400
 Wire Wire Line
 	5300 4700 6450 4700
-Text Notes 9250 3450 0    39   Italic 0
-TO DO: \n- Add digi P/N for connector pre-crimped leads\n- Add digi P/N for thermistor \n- Add digi P/N for passives \n- Add digi P/N for Thermal interface material\n- Add digi P/N for CAN to UART adapter? 
 $Comp
 L beverageWarmer1-rescue:Logo_Open_Hardware_Small-Graphic #LOGO1
 U 1 1 62677530
