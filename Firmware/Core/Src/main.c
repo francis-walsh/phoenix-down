@@ -162,7 +162,7 @@ int main(void)
 	sendCANMessage();
 
 	HAL_GPIO_WritePin(GPIOA, LED_1_Pin, GPIO_PIN_RESET);
-	HAL_Delay(300);
+	HAL_Delay(400);
 	HAL_GPIO_WritePin(GPIOA, LED_1_Pin, GPIO_PIN_SET);
 	HAL_Delay(300);
 
@@ -548,22 +548,6 @@ void getADCData()
 	therm_val_bytes[1] = (uint8_t)therm_val;
 	fThermTemp = (float)therm_val*3.3/4095.0;
 	fThermTemp = fThermTemp * thermSlope + thermOffset;
-
-	sConfig.Channel = ADC_CHANNEL_1;
-	HAL_ADC_ConfigChannel(&hadc1, &sConfig);
-    HAL_ADC_Start(&hadc1);
-    HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-    buck_voltage = HAL_ADC_GetValue(&hadc1);
-	buck_voltage_bytes[0] = (uint8_t)(buck_voltage >> 8);
-	buck_voltage_bytes[1] = (uint8_t)buck_voltage;
-
-	sConfig.Channel = ADC_CHANNEL_2;
-	HAL_ADC_ConfigChannel(&hadc1, &sConfig);
-    HAL_ADC_Start(&hadc1);
-    HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-    batt_voltage = HAL_ADC_GetValue(&hadc1);
-	batt_voltage_bytes[0] = (uint8_t)(batt_voltage >> 8);
-	batt_voltage_bytes[1] = (uint8_t)batt_voltage;
 }
 
 
