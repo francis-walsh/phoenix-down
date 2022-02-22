@@ -8,6 +8,7 @@ import os
 from datetime import datetime
 
 
+
 # Declare Vars
 # Plot init
 plt.ion()
@@ -29,9 +30,15 @@ deltaV = float( VREF/pow(2, dataBits) )
 thermistorSlope = float(-59.15236876) # Degrees per volt
 thermistorOffset = float(146.1606401) # Degrees
 
+# Values for alarm threshold
+regulatedTemperature = 55
+alarmThresholdMax = 70
+alarmThresholdMin = 20
+
 # Misc
 saveLogDirectory = 'logs/'
 os.system('cls')
+serialToken = "0F"
 print("Starting serial...")
 
 # Serial init
@@ -77,6 +84,8 @@ def logo():
 	print("**************************************************")
 	print("By Walsh^2 Inc")
 	print("Date ", datetime.now())
+	print("Temperature is currently being regulated at " + str(regulatedTemperature))
+	print("Alarm threshold is between " + str(alarmThresholdMin) + " and " + str(alarmThresholdMax) + " Degrees C")
 
 
 
@@ -87,7 +96,7 @@ def saveLog(name):
 	except:
 		file = open(saveLogDirectory+name+".csv", 'w')
 	file.write("Date,"+str(datetime.now())+"\n")
-	file.write("Sample (n),Elapsed Time(s),Temperature (Degrees C)\n")
+	file.write("Sample (n),Elapsed Time (s),Temperature (Degrees C)\n")
 	for i in range (0, len(sample)):
 		file.write(str(sample[i])+","+str(timeElapsed[i])+","+str(temperatureData[i])+"\n")
 	file.close()
@@ -99,6 +108,12 @@ def saveLog(name):
 def playAlarm(numberOfTimes):
 	for i in range(0, numberOfTimes):
 		playsound('peep.mp3')
+		
+	
+# Send byte over serial
+# Byte should be of the form 0x[XX]
+def writeByte(byte):
+	ser.write(bytes.fromhex(serialToken+' '+str(byte)))
 
 
 
@@ -106,13 +121,7 @@ def playAlarm(numberOfTimes):
 def commandThread():
 	print("Enter 'help' or 'h' for a list of commands")
 	while(True):
-		temp = input("Command:\n")
-		ser.write(str.encode(temp))
-		# *** FIRMWARE FUNCTIONS HERE ***
-		# Make ping - pong function
-		# Make temperature setpoint function
-		# Make make alarm threshold function
-		# Make PID Loop configurations?
+		temp = input("=>")
 		
 		
 		
@@ -122,22 +131,34 @@ def commandThread():
 			playAlarm(3)
 			
 		if(temp == "help" or temp == "h"):
-			print("t			- Displays current temperature")
-			print("sampleCrop		- Toggles x axis cropping")
-			print("sampleLength		- Sets the length of x axis cropping")
-			print("fancyLims		- Toggles y axis cropping")
+			print("t					- Displays current temperature")
+			print("setTemp [num]		- Sets target temperature to [num]")
+			print("setMaxThreshold [num]- Sets maximum threshold for alarm to [num]")
+			print("setMinThreshold [num]- Sets minimum threshold for alarm to [num]")
+			print("sampleCrop			- Toggles x axis cropping")
+			print("sampleLength [num]	- Sets the length of x axis to [num]")
+			print("fancyLims			- Toggles y axis cropping")
+			print("ping					- Arduino should respond with 'pong' if connected correctly")
 			print("saveas [name]		- Saves the logged data in a csv file [name].csv")
+			print("clr					- Clears terminal")
+		
 		
 		if(temp == "t"):
 			print(temperatureData[len(temperatureData)-1])
+			
+		if("setTemp" in temp):
+			byteData = str(hex(int(temp.replace("setTemp ", ""))))[2:]
+			if(len(byteData) <= 1):
+				byteData = '0'+byteData
+			writeByte(byteData)
 			
 		if(temp == "sampleCrop"):
 			global cropData
 			cropData = not cropData
 		
-		if(temp == "sampleLength"):
+		if("sampleLength" in temp):
 			global maxLength
-			maxLength = int(input("Display Length\n"))
+			maxLength = int(temp.replace("sampleLength ", ""))
 		
 		if(temp == "fancyLims"):
 			global fancyYLim
@@ -145,6 +166,21 @@ def commandThread():
 		
 		if("saveas" in temp):
 			saveLog(temp.replace("saveas ", ""))
+			
+		if("setMinThreshold" in temp):
+			global alarmThresholdMin
+			alarmThresholdMin = int(temp.replace("setMinThreshold ", ""))
+		
+		if("setMaxThreshold" in temp):
+			global alarmThresholdMax
+			alarmThresholdMax = int(temp.replace("setMaxThreshold ", ""))
+		
+		if(temp == 'clr'):
+			os.system('cls')
+			logo()
+			
+		if(temp == "ping"):
+			writeByte('FF')
 		
 
 # Start program here...
@@ -165,8 +201,11 @@ while(True):
 	data = data.decode()
 	data = data.split(',')
 	
+	# Ping Pong statement
+	if("pong" in str(data)):
+		print("pong\n")
+		playAlarm(1)
 	
-	# *** PUT ALARM CASES HERE ***
 	
 	
 	# Convert data into temperature
@@ -178,6 +217,18 @@ while(True):
 		# print("Des: " + str(temperature))
 		temperature = float( thermistorSlope*(temperature*deltaV)+thermistorOffset )
 		# print("Temp: " + str(temperature))
+		
+		
+		
+		# *** PUT ALARM CASES HERE ***
+		if(temperature < alarmThresholdMin or temperature > alarmThresholdMax):
+			print("WARNING!!!")
+			print("TEMPERATURE AT " + str(temperature))
+			print("SENDING OFF COMMAND")
+			playAlarm(int(5))
+			ser.write()
+	
+	
 		
 	# Plot temperature
 	if(temperature < 100 and temperature > -5):
