@@ -27,12 +27,10 @@ float PIDController_Update(PIDController *pid, float setpoint, float measurement
 	*/
     float error = setpoint - measurement;
 
-
 	/*
 	* Proportional
 	*/
     float proportional = pid->Kp * error;
-
 
 	/*
 	* Integral
@@ -50,12 +48,11 @@ float PIDController_Update(PIDController *pid, float setpoint, float measurement
 
     }
 
-
 	/*
 	* Derivative (band-limited differentiator)
 	*/
 
-    pid->differentiator = -(2.0f * pid->Kd * (measurement - pid->prevMeasurement)	/* Note: derivative on measurement, therefore minus sign in front of equation! */
+    pid->differentiator = -(2.0f * pid->Kd * (measurement - pid->prevMeasurement)
                         + (2.0f * pid->tau - pid->T) * pid->differentiator)
                         / (2.0f * pid->tau + pid->T);
 

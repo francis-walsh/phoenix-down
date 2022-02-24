@@ -54,40 +54,37 @@ void loop()
      Serial.println("");
     }
   
-  // Serial write commands
+  
+    }
+
+    // Serial write commands
   // Pong test
-  bytes = Serial.read();
-  if(bytes == 0xFFF)
-  {
-    Serial.println("pong");
-  }
-
-
+    bytes = Serial.read();
+    
+    if(bytes == 0xFF)
+    {
+      Serial.println("pong");
+    }
   
-  // CAN Write function
-  // Bytes is the data from the python script
-  // Need to send the data stored in 'bytes' through CAN interface
-  if(bytes >= 0xF00)
-  {
-    // Remove 0xF0 from byte data
-    bytes = bytes & 0x0FF;
-
-    // Send CAN message
-    message.id = 0x631; //formatted in HEX
-    message.header.rtr = 0;
-    message.header.length = 8; //formatted in DEC
-    message.data[0] = 0x40;
-    message.data[1] = 0x05;
-    message.data[2] = 0x30;
-    message.data[3] = 0xFF; //formatted in HEX
-    message.data[4] = 0x00;
-    message.data[5] = 0x40;
-    message.data[6] = 0x00;
-    message.data[7] = 0x00;
   
-    mcp2515_bit_modify(CANCTRL, (1<<REQOP2)|(1<<REQOP1)|(1<<REQOP0), 0);
-    mcp2515_send_message(&message);
-  }
-}
+    if(bytes >= 0x00)
+    {
+      Serial.println(bytes);
+    // CAN Write function
+    // Bytes is the data from the python script
+    // Need to send the data stored in 'bytes' through CAN interface
+      // Send CAN message
+      message.id = 0x631; //formatted in HEX
+      message.header.rtr = 0;
+      message.header.length = 1; //formatted in DEC
+      message.data[0] = bytes;
+    
+      mcp2515_bit_modify(CANCTRL, (1<<REQOP2)|(1<<REQOP1)|(1<<REQOP0), 0);
+      mcp2515_send_message(&message);
+  
+      delay(500);
+      
+    }
+
 
 }

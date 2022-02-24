@@ -20,7 +20,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "PID.h"
@@ -68,6 +67,11 @@ static void MX_TIM2_Init(void);
 int duty = 0;
 int direction = 1;
 
+// CAN Vars
+uint8_t datacheck = 0;
+uint8_t RxData[8];
+
+
 // ADC variables
 uint16_t therm_val;
 uint8_t therm_val_bytes[2];
@@ -85,10 +89,10 @@ ADC_ChannelConfTypeDef sConfig = {0};
 
 // PID Parameters
 /* Controller parameters */
-float setpoint = 40.0f;
+float setpoint = 35.0f;
 
-#define PID_KP  2.0f
-#define PID_KI  0.5f
+#define PID_KP  20.0f
+#define PID_KI  1.0f
 #define PID_KD  0.0f
 
 #define PID_TAU 0.02f
@@ -147,6 +151,12 @@ int main(void)
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_Base_Start_IT(&htim2);
 
+  HAL_CAN_Start(&hcan);
+  if(HAL_CAN_ActivateNotification(&hcan, CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK)
+  {
+	  Error_Handler();
+  }
+
   PIDController_Init(&pid);
 
 
@@ -159,12 +169,19 @@ int main(void)
   {
 	//TIM1->CCR1 = 9999;
 
-	sendCANMessage();
+	// sendCANMessage();
 
-	HAL_GPIO_WritePin(GPIOA, LED_1_Pin, GPIO_PIN_RESET);
-	HAL_Delay(400);
-	HAL_GPIO_WritePin(GPIOA, LED_1_Pin, GPIO_PIN_SET);
-	HAL_Delay(300);
+	HAL_Delay(500);
+
+
+
+	if(datacheck == 1)
+	{
+		HAL_GPIO_TogglePin(GPIOA, LED_2_Pin);
+		HAL_Delay(300);
+		datacheck = 0;
+		setpoint = RxData[0];
+	}
 
     /* USER CODE END WHILE */
 
@@ -227,7 +244,7 @@ static void MX_ADC1_Init(void)
 
   /* USER CODE END ADC1_Init 0 */
 
-
+  ADC_ChannelConfTypeDef sConfig = {0};
 
   /* USER CODE BEGIN ADC1_Init 1 */
 
@@ -309,6 +326,21 @@ static void MX_CAN_Init(void)
   {
     Error_Handler();
   }
+
+  CAN_FilterTypeDef canfilterconfig;
+
+  canfilterconfig.FilterActivation = CAN_FILTER_ENABLE;
+  canfilterconfig.FilterBank = 10;  // which filter bank to use from the assigned ones
+  canfilterconfig.FilterFIFOAssignment = CAN_FILTER_FIFO1;
+  canfilterconfig.FilterIdHigh = 0x631<<5;
+  canfilterconfig.FilterIdLow = 0;
+  canfilterconfig.FilterMaskIdHigh = 0x631<<5;
+  canfilterconfig.FilterMaskIdLow = 0x0000;
+  canfilterconfig.FilterMode = CAN_FILTERMODE_IDMASK;
+  canfilterconfig.FilterScale = CAN_FILTERSCALE_32BIT;
+  canfilterconfig.SlaveStartFilterBank = 0;  // how many filters to assign to the CAN1 (master can)
+
+  HAL_CAN_ConfigFilter(&hcan, &canfilterconfig);
 
   /* USER CODE END CAN_Init 2 */
 
@@ -410,7 +442,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 799;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 999;
+  htim2.Init.Period = 9999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_OC_Init(&htim2) != HAL_OK)
@@ -535,6 +567,27 @@ void sendCANMessage()
 		Error_Handler();
 	}
 	*/
+}
+
+
+// CAN read function
+CAN_RxHeaderTypeDef   RxHeader;
+
+
+
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+
+  if (HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if ((RxHeader.DLC == 1))
+  {
+	  datacheck = 1;
+
+  }
 }
 
 void getADCData()

@@ -38,11 +38,10 @@ alarmThresholdMin = 20
 # Misc
 saveLogDirectory = 'logs/'
 os.system('cls')
-serialToken = "0F"
 print("Starting serial...")
 
 # Serial init
-ser = serial.Serial('com8', 9600)
+ser = serial.Serial('com4', 9600)
 
 
 
@@ -113,7 +112,8 @@ def playAlarm(numberOfTimes):
 # Send byte over serial
 # Byte should be of the form 0x[XX]
 def writeByte(byte):
-	ser.write(bytes.fromhex(serialToken+' '+str(byte)))
+	ser.write(bytes.fromhex(str(byte)))
+	print(bytes.fromhex(str(byte)))
 
 
 
@@ -181,6 +181,7 @@ def commandThread():
 			
 		if(temp == "ping"):
 			writeByte('FF')
+
 		
 
 # Start program here...
@@ -200,11 +201,13 @@ while(True):
 	data = ser.readline()
 	data = data.decode()
 	data = data.split(',')
+
+	print(str(data))
 	
 	# Ping Pong statement
 	if("pong" in str(data)):
 		print("pong\n")
-		playAlarm(1)
+		#playAlarm(1)
 	
 	
 	
